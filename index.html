@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+      padding-left: 80px;
+      user-select: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1,
+    h2 {
+      color: white;
+    }
+
+    .craftingTable {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      width: 300px;
+    }
+
+    .slot {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border-width: 1px;
+      border-style: solid;
+      border-color: gray;
+    }
+
+    .slot img {
+      display: none;
+      margin-top: 10px;
+      width: 100px;
+      height: 70px;
+    }
+
+    #bauBtn {
+      width: 80px;
+      height: 40px;
+      margin-top: 70px;
+      margin-left: 20px;
+    }
+
+    .slotContainer {
+      width: 100px;
+      height: 100px;
+      border-width: 1px;
+      border-color: white;
+      border-style: solid;
+      margin-left: 80px;
+      margin-top: 40px;
+      background-color: white;
+    }
+
+    .slotContainer img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .ergebnisBereich {
+      display: flex;
+    }
+
+    .linksContainer {
+      width: 40vw;
+    }
+
+    .rechtsContainer {
+      display: flex;
+      width: 60vw;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 90vh;
+    }
+
+    #monster {
+      width: 50%;
+      height: 75%;
+    }
+
+    .lebenContainer {
+      width: 50%;
+      height: 4%;
+      border: 1px solid white;
+    }
+
+    #monsterLeben {
+      width: 100%;
+      height: 100%;
+      background-color: red;
+    }
+
+    .herz {
+      margin-top: 5%;
+      width: 50px;
+      margin-bottom: 1%;
+    }
+
+    .monsterContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      width: 80%;
+    }
+
+    .ressourcen {
+      display: flex;
+      align-items: center;
+    }
+
+    #rucksack {
+      margin-left: 100px;
+    }
+
+    #inventar {
+      display: none;
+      position: absolute;
+      margin-top: 5vh;
+      margin-left: 5vw;
+      width: 80vw;
+      height: 80vh;
+      background-color: white;
+      border: 5px solid black;
+      z-index: 1;
+    }
+
+    #close {
+      position: relative;
+      float: right;
+    }
+  </style>
+  <script src="rezepte.js" defer></script>
+  <script src="inventar.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="linksContainer">
+      <div id="inventar">
+        <img id="close" src="kreuz.png" width="50px">
+        <div id="gegenstandBereich"></div>
+      </div>
+      <img id="baum" src="baum.png" width="200px" />
+      <img id="stein" src="felsen.png" width="200px" style="opacity: 0.2" />
+      <img id="gold" src="gold.png" width="200px" style="opacity: 0.2" />
+      <div class="ressourcen">
+        <div>
+          <h2 id="holzText">Holz: 0</h2>
+          <h2 id="steinText">Stein: 0</h2>
+          <h2 id="goldText">Gold: 0</h2>
+        </div>
+        <img id="rucksack" src="rucksack.png" width="100px" height="130px">
+      </div>
+      <div class="craftingTable">
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+        <div class="slot">
+          <img />
+        </div>
+      </div>
+      <div class="ergebnisBereich">
+        <button id="bauBtn">Bauen</button>
+        <div class="slotContainer">
+          <img id="item" />
+        </div>
+      </div>
+    </div>
+    <div class="rechtsContainer">
+      <div class="monsterContainer">
+        <h1>Level 1</h1>
+        <img id="monster" src="monster.png" alt="">
+        <img class="herz" src="herz.png">
+        <div class="lebenContainer">
+          <div id="monsterLeben"></div>
+        </div>
+      </div>
+      <div class="waffenContainer">
+        <div class="slotContainer waffenSlot">
+          <img>
+        </div>
+        <div class="slotContainer waffenSlot">
+          <img>
+        </div>
+        <div class="slotContainer waffenSlot">
+          <img>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
