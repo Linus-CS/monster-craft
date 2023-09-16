@@ -141,6 +141,7 @@
   </style>
   <script src="rezepte.js" defer></script>
   <script src="inventar.js" defer></script>
+  <script src="monster.js" defer></script>
   <script src="main.js" defer></script>
 </head>
 
@@ -148,19 +149,19 @@
   <div class="container">
     <div class="linksContainer">
       <div id="inventar">
-        <img id="close" src="kreuz.png" width="50px">
+        <img id="close" src="assets/misc/kreuz.png" width="50px">
         <div id="gegenstandBereich"></div>
       </div>
-      <img id="baum" src="baum.png" width="200px" />
-      <img id="stein" src="felsen.png" width="200px" style="opacity: 0.2" />
-      <img id="gold" src="gold.png" width="200px" style="opacity: 0.2" />
+      <img id="baum" src="assets/ressourcen/baum.png" width="200px" />
+      <img id="stein" src="assets/ressourcen/felsen.png" width="200px" style="opacity: 0.2" />
+      <img id="gold" src="assets/ressourcen/gold.png" width="200px" style="opacity: 0.2" />
       <div class="ressourcen">
         <div>
           <h2 id="holzText">Holz: 0</h2>
           <h2 id="steinText">Stein: 0</h2>
           <h2 id="goldText">Gold: 0</h2>
         </div>
-        <img id="rucksack" src="rucksack.png" width="100px" height="130px">
+        <img id="rucksack" src="assets/misc/rucksack.png" width="100px" height="130px">
       </div>
       <div class="craftingTable">
         <div class="slot">
@@ -201,11 +202,12 @@
     <div class="rechtsContainer">
       <div class="monsterContainer">
         <h1>Level 1</h1>
-        <img id="monster" src="monster.png" alt="">
-        <img class="herz" src="herz.png">
+        <img id="monster" src="assets/monster/monster.png" alt="">
+        <img class="herz" src="assets/monster/herz.png">
         <div class="lebenContainer">
           <div id="monsterLeben"></div>
         </div>
+        <h2 id="lootCounter">100</h2>
       </div>
       <div class="waffenContainer">
         <div class="slotContainer waffenSlot">

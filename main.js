@@ -52,7 +52,7 @@ function holzReintuen(i) {
     holz -= 100;
     holz_text.textContent = "Holz: " + holz;
 
-    slots[i].children[0].src = "holz.png";
+    slots[i].children[0].src = "assets/ressourcen/holz.png";
     slots[i].children[0].style.display = "block";
     craftingTable[i] = "holz";
   }
@@ -63,7 +63,7 @@ function steinReintuen(i) {
     stein -= 100;
     stein_text.textContent = "Stein: " + stein;
 
-    slots[i].children[0].src = "stein.png";
+    slots[i].children[0].src = "assets/ressourcen/stein.png";
     slots[i].children[0].style.display = "block";
     craftingTable[i] = "stein";
   }
@@ -74,7 +74,7 @@ function goldReintuen(i) {
     gold -= 100;
     gold_text.textContent = "Gold: " + gold;
 
-    slots[i].children[0].src = "goldErz.png";
+    slots[i].children[0].src = "assets/ressourcen/goldErz.png";
     slots[i].children[0].style.display = "block";
     craftingTable[i] = "gold";
   }

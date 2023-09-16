@@ -1,7 +1,7 @@
-let rucksack_element = document.getElementById("rucksack");
-let inventar_element = document.getElementById("inventar");
-let gegenstaende_element = document.getElementById("gegenstandBereich");
-let close_element = document.getElementById("close");
+const rucksack_element = document.getElementById("rucksack");
+const inventar_element = document.getElementById("inventar");
+const gegenstaende_element = document.getElementById("gegenstandBereich");
+const close_element = document.getElementById("close");
 
 function zeigeInventar() {
     inventar_element.style.display = "block";
